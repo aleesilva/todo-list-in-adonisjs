@@ -26,5 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install 
+    - run: npm i -g @adonisjs/cli
+    - run: command -v adonis
     - run: adonis migration:run
     - run: adonis serve --dev
